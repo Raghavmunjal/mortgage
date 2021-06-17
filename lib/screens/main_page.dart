@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mortgage_calc/components/bottom_button.dart';
 import 'package:mortgage_calc/constants.dart';
+import 'package:mortgage_calc/screens/details_page.dart';
 import '../components/title_bar.dart';
 import '../components/slider_part.dart';
 import '../components/result_part.dart';
@@ -25,10 +26,10 @@ class _MainPageState extends State<MainPage> {
           Expanded(
             child: Titlebar(str1: 'Calculate',
               str2: 'Mortgage',
-              color1: kBackgroundColor,
-              color2: kActiveColor),
+              color1: kBackgroundColorMain,
+              color2: kActiveColorMain),
           ),
-          Expanded(child: Image.asset('images/BACK1.png'),),
+          Expanded(child: Image.asset('images/BACK1.png'),flex: 2,),
           Expanded(
             child: SliderPart(item: 'Rs.' + loanNeeded.toString(),
               str: 'Price',
@@ -75,7 +76,9 @@ class _MainPageState extends State<MainPage> {
               ),),
           ),
           Expanded(child: ResultPart(result: result,),),
-          Expanded(child: BottomButton(str: 'See Details', onPress: () {})),
+          Expanded(child: BottomButton(str: 'See Details',color:kActiveColorMain, onPress: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsPage(result: result,)));
+          }),),
         ],
       ),
     );

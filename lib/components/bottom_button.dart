@@ -3,10 +3,12 @@ import 'package:mortgage_calc/constants.dart';
 
 class BottomButton extends StatelessWidget {
 
-  BottomButton({required this.str,required this.onPress});
+  BottomButton({required this.str,required this.onPress,required this.color});
 
   final String str;
   final VoidCallback onPress;
+  final color;
+
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class BottomButton extends StatelessWidget {
         height: kBottomContainerHeight,
         width: 200,
         decoration: BoxDecoration(
-          color:kActiveColor,
+          color:color,
           borderRadius: BorderRadius.circular(50),
         ),
          margin: EdgeInsets.all(20),

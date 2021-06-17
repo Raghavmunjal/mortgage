@@ -21,13 +21,13 @@ class SliderPart extends StatelessWidget {
             children: [
               Text(
                 str,
-                style: TextStyle(fontSize: 16, color: kBackgroundColor),
+                style: TextStyle(fontSize: 16, color: kBackgroundColorMain),
               ),
               Text(
                 item,
                 style: TextStyle(
                     fontSize: 20,
-                    color: kActiveColor,
+                    color: kActiveColorMain,
                     fontWeight: FontWeight.w500),
               ),
             ],
@@ -35,10 +35,10 @@ class SliderPart extends StatelessWidget {
         ),
         SliderTheme(
           data: SliderTheme.of(context).copyWith(
-            thumbColor: kActiveColor,
+            thumbColor: kActiveColorMain,
             overlayColor: Color(0x296258A8),
             thumbShape: RoundSliderThumbShape(enabledThumbRadius: 13),
-            activeTrackColor: kActiveColor,
+            activeTrackColor: kActiveColorMain,
             inactiveTrackColor: Color(0xFFE4DFEC),
             overlayShape: RoundSliderOverlayShape(overlayRadius: 30),
           ),
