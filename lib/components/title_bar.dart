@@ -13,7 +13,7 @@ class Titlebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
       child: Row(
         children: [
           Column(
@@ -28,3 +28,5 @@ class Titlebar extends StatelessWidget {
     );
   }
 }
+
+

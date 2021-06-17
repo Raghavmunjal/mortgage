@@ -19,9 +19,10 @@ class BottomButton extends StatelessWidget {
           color:kActiveColor,
           borderRadius: BorderRadius.circular(50),
         ),
-        margin: EdgeInsets.all(20),
+         margin: EdgeInsets.all(20),
         child: Center(child: Text(str,style: kBottomButtonStyle,)),
       ),
     );
   }
 }
+
